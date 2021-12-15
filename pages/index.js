@@ -3,15 +3,19 @@ import Header from "../components/Header";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="antialiased">
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Voglershop</title>
+        <link rel="icon" href="/favicon.ico"/>
+        <link
+          href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,700|Arvo:400,700"
+          rel="stylesheet"
+        />
       </Head>
 
-      <Header />
+      <Header/>
 
-      <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
+      <main className="flex flex-col z-50 items-center justify-center w-full flex-1 px-20 text-center bg-vogler-green p-8">
         <h1 className="text-6xl font-bold">
           Welcome to{' '}
           <a className="text-blue-600" href="https://nextjs.org">
@@ -77,7 +81,7 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2" />
+          <img src="/vercel.svg" alt="Vercel Logo" className="h-4 ml-2"/>
         </a>
       </footer>
     </div>

@@ -1,3 +1,32 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.logo {
+    @apply w-full top-0 fixed bg-cover bg-center bg-[url("/header/header_bg.jpg")]
+    before:absolute -z-50 before:-z-50 before:inset-0 before:bg-gradient-to-b before:from-[#fffef2E6] before:to-[#edecb3F2]
+}
+
+.nav {
+    @apply font-serif flex justify-center bg-red-200 p-5 space-x-16 sticky top-0 mt-56 text-vogler-green bg-vogler-yellow
+}
+.nav a {@apply hover:text-vogler-orange text-lg tracking-wide hover:ease-linear duration-150 relative   	}
+
+nav a::after {
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    width: 90%;
+    height: 5px;
+    background: rgba(0, 0, 0, 0.1);
+    content: "";
+    opacity: 0;
+    transition: opacity 0.3s, transform 0.3s;
+    transform: translateY(15px);
+}
+
+nav a:not(.no-hover):hover::after,
+nav a:not(.no-hover):focus::after {
+    opacity: 1;
+    transform: translateY(5px);
+}
