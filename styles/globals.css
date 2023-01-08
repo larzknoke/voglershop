@@ -32,6 +32,7 @@ label {
 
 input[type="text"],
 input[type="date"],
+input[type="password"],
 select,
 .form-group textarea {
   @apply rounded border border-gray-300 py-2 focus:border-vogler-green;
@@ -67,6 +68,10 @@ tbody > tr:first-child td {
 
 .box {
   @apply bg-vogler-yellow2 text-vogler-green rounded px-7 py-5;
+}
+
+.nav .box {
+  @apply bg-vogler-yellow text-vogler-orange drop-shadow-md py-6 px-8;
 }
 
 .button {

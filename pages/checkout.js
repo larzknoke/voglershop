@@ -15,23 +15,13 @@ function Checkout() {
     formState: { errors },
   } = useForm();
 
-  const { cartItems, setCartItems } = useShoppingCartContext();
-  const [confirmationOrder, setConfirmationOrder] = useState({});
+  const { cartItems } = useShoppingCartContext();
+  const [confirmationOrder] = useState({});
   const [cartProducts, setCartProducts] = useState([]);
-  const [checkoutData, setCheckoutData] = useState({
-    vorname: "",
-    nachname: "",
-    telefon: "",
-    email: "",
-    abholdatum: "",
-    bezahlung: "",
-    notiz: "",
-    gast: true,
-  });
 
   useEffect(() => {
     const ids = cartItems.map((i) => i.id).join(",");
-    fetch(`http://0.0.0.0:4000/shop/produkts.json?ids=${ids}`)
+    fetch(`http://localhost:4000/shop/produkts.json?ids=${ids}`)
       .then((res) => res.json())
       .then((data) => {
         setCartProducts(data);

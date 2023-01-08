@@ -15,7 +15,7 @@ function Cart() {
 
   useEffect(() => {
     const ids = cartItems.map((i) => i.id).join(",");
-    fetch(`http://0.0.0.0:4000/shop/produkts.json?ids=${ids}`)
+    fetch(`http://localhost:4000/shop/produkts.json?ids=${ids}`)
       .then((res) => res.json())
       .then((data) => {
         setCartProducts(data);
